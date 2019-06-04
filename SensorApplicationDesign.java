@@ -17,7 +17,7 @@ public class SensorApplicationDesign extends JFrame {
 		setTitle("Sensor Tracker");
 		setLayout(new GridLayout(3,1));
 
-		
+		//This block of code could be in its own method
 		Isensor rs_adapter = new AdapterRadiationSensor();
 		double radiationValue = rs_adapter.getValue();
 		String format = rs_adapter.getName()+"("+rs_adapter.getInfo()+")"+"-->"+radiationValue;
@@ -25,6 +25,7 @@ public class SensorApplicationDesign extends JFrame {
 	    SensorsPanel radiationPnl = new SensorsPanel(rs_adapter.getInfo(),rs_adapter.getValue());
 	    radiationPnl.add(radiationLabel);
 		
+		//This block of code could be in its own method
 	    Isensor ts_adapter = new AdapterTemperatureSensor();  
 	    double tempValue = ts_adapter.getValue();
 		format = ts_adapter.getName()+"("+ts_adapter.getInfo()+")"+"-->"+tempValue;
@@ -32,6 +33,7 @@ public class SensorApplicationDesign extends JFrame {
 		SensorsPanel temperaturePnl = new SensorsPanel(ts_adapter.getInfo(),ts_adapter.getValue());
 		temperaturePnl.add(tempLabel);
 		
+		//This block of code could be in its own method
 		Isensor ps_adapter = new AdapterPressureSensor();
 		double PressureValue = ps_adapter.getValue();
 	    format = ps_adapter.getName()+"("+ps_adapter.getInfo()+")"+"-->"+PressureValue;

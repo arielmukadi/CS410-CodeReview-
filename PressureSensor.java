@@ -1,6 +1,6 @@
 
 import java.util.Random;
-
+//PressureSensor, TemperatureSensor, RadiationSensor were suppose to imported as a jar file; you werent suppose to touch this
 public class PressureSensor {
     private double pressure;
 
